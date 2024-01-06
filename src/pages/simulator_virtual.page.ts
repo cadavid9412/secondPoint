@@ -8,7 +8,7 @@ export class simulatorVirtualPage extends pageController {
     buttonInversions : Locator = this.page.getByRole('link', { name: 'Inversiones' })
     buttonVirtualInversion: Locator = this.page.getByRole('link', { name: 'Inversión Virtual' })
     continue: Locator = this.page.getByRole('button', { name: 'CONTINUAR' })
-    
+
     constructor(public readonly page:Page) {super(page)}
     async navigate() {
         await this.page.goto("https://www.bancolombia.com/personas/productos-servicios/inversiones/cdts/inversion-virtual/simulador-inversion-virtual");
@@ -42,9 +42,5 @@ export class simulatorVirtualPage extends pageController {
         await this.page.getByPlaceholder('días').fill('180');
         await this.page.getByRole('button', { name: 'SIMULAR' }).click();
     }
-    async deleteBusinesse (businessName: string) {
-    }
-
-    async navigateToBusiness(businessId: string) {
-    }
+    
 }

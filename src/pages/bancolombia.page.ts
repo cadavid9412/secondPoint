@@ -33,9 +33,5 @@ export class HomePage extends pageController {
         await this.page.getByPlaceholder('días').fill('180');
         await this.page.getByRole('button', { name: 'SIMULAR' }).click();
     }
-    async deleteBusinesse (businessName: string) {
-    }
-
-    async navigateToBusiness(businessId: string) {
-    }
+    
 }
